@@ -7,7 +7,7 @@ export default function Loader() {
     const [fadeOut, setFadeOut] = useState(false)
 
     useEffect(() => {
-        const fullText = 'Escape the matrix!'
+        const fullText = "India's Greatest Community of Hustlers"
         let index = 0
 
         const interval = setInterval(() => {
@@ -27,7 +27,7 @@ export default function Loader() {
 
     return (
         <div className="bg-background h-screen w-screen fixed top-0 left-0 z-99999 flex items-center justify-center">
-            <p className={`uppercase text-3xl md:text-5xl lg:text-7xl font-semibold text-primary transition-opacity duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
+            <p className={`px-4 text-center uppercase text-2xl lg:text-5xl font-semibold text-primary transition-opacity duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
                 {displayedText}
             </p>
         </div>
