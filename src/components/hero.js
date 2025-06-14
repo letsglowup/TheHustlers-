@@ -8,7 +8,20 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/components/ui/avatar"
+} from "@/components/ui/avatar";
+import localFont from 'next/font/local';
+
+const boldonse = localFont({
+  src: [
+    {
+      path: '../../public/Boldonse-Regular (1).ttf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-boldonse'
+})
+
 
 const Hero = () => {
 
@@ -68,10 +81,11 @@ const Hero = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex rounded-xl px-4 py-3 lg:px-5 lg:py-4 text-white font-semibold text-2xl lg:text-3xl bg-[linear-gradient(to_right,_#000000,_#333333,_#000000)] shadow-md border items-center justify-center gap-2"
+          className={`golden-text ${boldonse.className} flex items-center justify-center gap-1 text-lg md:text-2xl lg:text-4xl tracking-widest leading-[1.2] py-1 overflow-visible`}
         >
-          The Hustlers Campus <Image height={800} width={800} alt="Indian flag" src="/india.svg" className="size-8" />
+          The Hustlers Campus <Image height={800} width={800} alt="Indian flag" src="/india.svg" className="size-8 lg:size-10" />
         </motion.div>
+
 
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -80,29 +94,28 @@ const Hero = () => {
           className="flex flex-col items-center justify-center gap-2 mt-4"
         >
           <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2">
-            <Avatar className="size-12">
+            <Avatar className="size-10">
               <AvatarImage src="/avatars/avt1.jpg" />
               <AvatarFallback>A</AvatarFallback>
             </Avatar>
-            <Avatar className="size-12">
+            <Avatar className="size-10">
               <AvatarImage src="/avatars/avt2.jpg" />
               <AvatarFallback>Z</AvatarFallback>
             </Avatar>
-            <Avatar className="size-12">
+            <Avatar className="size-10">
               <AvatarImage src="/avatars/avt3.jpg" />
               <AvatarFallback>S</AvatarFallback>
             </Avatar>
-            <Avatar className="size-12">
+            <Avatar className="size-10">
               <AvatarImage src="/avatars/avt4.jpg" />
               <AvatarFallback>H</AvatarFallback>
             </Avatar>
-            <Avatar className="size-12">
+            <Avatar className="size-10">
               <AvatarImage src="/avatars/avt5.jpg" />
               <AvatarFallback>R</AvatarFallback>
             </Avatar>
           </div>
-          <AnimatedShinyText><span className="text-yellow-400 font-bold text-2xl">700+</span></AnimatedShinyText>
-          <p>Happy Learners Worldwide</p>
+          <AnimatedShinyText><span className="font-bold text-gray-200">Join 1100+ members already growing</span></AnimatedShinyText>
 
         </motion.div>
         <motion.div
@@ -181,4 +194,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero
