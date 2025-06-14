@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationFinished(true);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,3 +46,4 @@ export default function Home() {
     </>
   );
 }
+  
