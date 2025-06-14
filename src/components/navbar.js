@@ -55,8 +55,8 @@ export default function Navbar() {
                         height={500}
                         width={1195}
                         alt='logo'
-                        className='h-12 lg:h-14 w-auto'
-                        src="/logo.png"
+                        className='h-13 lg:h-15 w-auto'
+                        src="/IMG-20250614-WA0006.jpg"
                     />
                 </Link>
                 <div className="flex-1 flex items-center justify-center">
@@ -103,4 +103,4 @@ export default function Navbar() {
             </nav>
         </motion.div>
     )
-}
+                                    }
